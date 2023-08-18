@@ -20,7 +20,7 @@ import { Textarea } from "@/components/ui/textarea"
 import Image  from 'next/image';
 import { ChangeEvent, useState } from "react";
 import { isBase64Image } from "@/lib/utils";
-import { useUploadThing } from "@/lib/validations/uploadthing";
+import { useUploadThing } from "@/lib/uploadthing";
 
 
 interface Props {
