@@ -1,9 +1,9 @@
 "use client"
-import * as z from "zod"
+import { z } from "zod";
+import Image from "next/image";
 import { useForm } from "react-hook-form";
+import { usePathname } from "next/navigation";
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Button } from "@/components/ui/button"
-
 
 import {
     Form,
@@ -11,14 +11,12 @@ import {
     FormField,
     FormItem,
     FormLabel,
-    FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
 
 
-import { usePathname, useRouter } from "next/navigation";
 import { CommentValidation } from "@/lib/validations/thread";
-import Image from "next/image";
 import { addCommentToThread } from "@/lib/actions/thread.actions";
 
 
@@ -29,7 +27,7 @@ interface Props {
 }
 
 const Comment = ({ threadId, currentUserImg, currentUserId }: Props) => {
-    const router = useRouter();
+    
     const pathname = usePathname()
 
     const form = useForm({
@@ -42,8 +40,6 @@ const Comment = ({ threadId, currentUserImg, currentUserId }: Props) => {
         await addCommentToThread(threadId, values.thread, JSON.parse(currentUserId), pathname);
 
         form.reset()
-
-        router.push('/')
     }
 
     return (

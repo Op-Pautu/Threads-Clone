@@ -32,7 +32,7 @@ const Page = async () => {
                                         className='rounded-full object-cover'
                                     />
                                     <p className="!text-small-regular text-light-1">
-                                        <span className="mr-1 text-primary-500">{activity.author.name}</span>{" "}
+                                        <span className="mr-1 text-primary-500">{activity.author.name}</span>{" "}replied to your thread
                                     </p>
                                 </article>
                             </Link>
@@ -43,7 +43,7 @@ const Page = async () => {
                 }
             </section>
         </>
-
+ 
     )
 }
 
