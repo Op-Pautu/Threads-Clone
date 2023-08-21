@@ -8,11 +8,11 @@ import RightSidebar from '@/components/shared/RightSidebar'
 import Bottombar from '@/components/shared/Bottombar'
 const inter = Inter({ subsets: ['latin'] })
 import { dark } from "@clerk/themes";
+
 export const metadata: Metadata = {
   title: "Threads",
   description: "A Next.js 13 Meta Threads application",
 };
-
 
 export default function RootLayout({
   children,
